@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Picks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        /* Existing styles */
+        
+        /* Add this new font-family to your h1 tag */
+        .header-content h1 { 
+        font-family: 'Fredoka One', cursive; /* Your chosen font */
+        -webkit-text-fill-color: white; /* Fill color for WebKit browsers */
+        -webkit-text-stroke-width: 3px; /* Stroke width for WebKit browsers */
+        -webkit-text-stroke-color: black; /* Stroke color for WebKit browsers */
+        color: white; /* Fallback color for non-WebKit browsers */
+        text-stroke-width: 3px; /* Standard syntax; currently only supported in Chrome */
+        text-stroke-color: black; /* Standard syntax */
+    }
+    </style>
+</head>
+    <style>
+        /* Body and general styles */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            height: 100%;
+            background-color: #FFF7E0; 
+        }
+        .content {
+            min-height: 100%;
+            /* Adjust the padding-bottom to the height of the footer */
+            padding-bottom: 150px; /* This should be equal to or greater than the height of your footer */
+            box-sizing: border-box; /* This makes sure the padding is included in the height */
+        }   
+        header { 
+            background: url('splatter.png') no-repeat center center, purple;
+            background-size: 500px; /* This will ensure the paint splatter fits within the header */
+            position: relative;
+            background-color: purple; 
+            color: black; 
+            padding: 10px 20px; 
+            text-align: center; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .sun {
+            width: 80px;
+            height: 80px;
+            background-color: #FFDD33;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            box-shadow: 0 0 8px #FFDD33, 0 0 12px #FFDD33;
+        }
+        .cloud, .cloud:before, .cloud:after {
+            background-color: #FFF;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .cloud {
+            width: 120px;
+            height: 60px;
+        }
+        .cloud:before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            top: -30px;
+            left: 10px;
+        }
+        .cloud:after {
+            content: '';
+            width: 80px;
+            height: 80px;
+            top: -40px;
+            right: 10px;
+        }
+        /* Cloud positioning
+        .cloud1 { top: 50px; left: 100px; }
+        .cloud2 { top: 80px; left: 300px; }
+        .cloud3 { top: 50px; left: 500px; }
+         */
+        /* Navigation styles */
+        nav { background: white; padding: 8px 20px; }
+        nav ul { list-style: none; padding: 0; }
+        nav ul li { display: inline; }
+        nav ul li a { 
+            color: purple; 
+            padding: 10px; 
+            text-decoration: none; 
+            border-radius: 20px; 
+            transition: background-color 0.2s ease; 
+        }
+        nav ul li a:hover { background-color: rgb(253, 223, 54); color: #FFF; }
+        section { margin: 20px; padding: 20px; background-color: white; border-radius: 8px; }
+        footer { 
+            background-color: purple; 
+            color: white; 
+            text-align: center; 
+            bottom: 0;
+            width: 100%;
+            /* Set the height of your footer */
+            height: 100px;
+        }
+        
+        /* Button styles */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px; /* Rounded corners */
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s ease; /* Smooth transition for interaction */
+        }
+        .btn-more {
+            background-color: #27AE60; /* Green background */
+            color: white;
+        }
+        .btn-more:hover {
+            transform: translateY(-2px); /* Slight raise on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
+        }
+        .btn-less {
+            background-color: #9B51E0; /* Purple background */
+            color: white;
+        }
+        .btn-less:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        /* Additional button styles can be added as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>ThrowawayPicks</h1>
+            <!-- The sun and clouds can be placed here as background elements -->
+        </div>
+
+        <img src="omalley2.png" alt="UFC Player" style="position: absolute; left: 20px; top: 20px; height: 120px;">
+        <img src="holloway.png" alt="NBA Player" style="position: absolute; left: 64px; top: 5px; height: 100px;">
+        <img src="pereria.png" alt="UFC Fighter" style="position: absolute; left: 140px; top: 20px; height: 150px; width: auto; object-fit: cover; object-position: center;">
+        <img src="garcia.png" alt="UFC Fighter" style="position: absolute; left: 200px; top: 20px; height: 150px; width: auto; object-fit: cover; object-position: center;">
+        <img src="lebron.png" alt="UFC Fighter" style="position: absolute; right: 210px; top: 5px; height: 150px; width: auto; object-fit: cover; object-position: center;">
+        <img src="jokicdoncic.png" alt="UFC Fighter" style="position: absolute; right: 20px; top: 2px; height: 150px; width: auto; object-fit: cover; object-position: center;">
+       
+       
+        <!-- 
+        <div class="sun"></div>
+        <div class="cloud cloud1"></div> -->
+        <!-- <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div> -->
+    </header>
+    <nav>
+        <ul>
+
+            <li><a class="btn" href="previouspicks.html">Previous Free Picks</a></li>
+            <li><a class="btn" href="#">Testimonials</a></li>
+            <li><a class="btn" href="stockspage.html">Stocks</a></li>
+            <li><a class="btn" href="#">Crypto</a></li>
+            <li><a class="btn" href="subPage.html">Subscribe</a></li>
+            <li><a class="btn" href="suppage.html">Live Support</a></li>
+        </ul>
+    </nav>
+    <title>Newsletter Sign Up</title>
+    <style>
+        .newsletter-signup {
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .newsletter-signup h2 {
+            font-size: 18px; /* Smaller font size */
+            line-height: 1.2; /* Tighter line height */
+            width: 100%; /* Full width of its container */
+            padding: 0 10px; /* Adjust padding as needed */
+            white-space: nowrap; /* Prevent wrapping */
+            overflow: hidden; /* Hide overflow */
+            text-overflow: ellipsis; /* Add an ellipsis for text that overflows the container */
+        }
+        .newsletter-signup input[type="email"] {
+            width: calc(100% - 40px); /* This reduces the width */
+            padding: 5px 20px; /* Reduced padding and added horizontal padding */
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px; /* Increased border-radius for a smoother look */
+            font-size: 16px; /* Adjust font size as needed */
+            box-sizing: border-box; /* Include padding in the width */
+        }
+        .newsletter-signup input[type="submit"] {
+            width: 200%;
+            padding: 10px;
+            border: none;
+            background-color: lightblue;
+            color: lightslategray;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .newsletter-signup input[type="submit"]:hover {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+
+<div class="newsletter-signup">
+    <h2> *LIMITED TIME* Unlock PAID PICKS for FREE!</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffDlKioXJ8RRoUgyq9NoJsmh1X3UG_YGXUb2gfZZ6Zov1F7g/viewform?embedded=true" width="500" height="170" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <!-- <form id="subscribeForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="submit" value="Subscribe"> -->
+    </form>
+</div>
+
+<!-- Link to your script file if you have one -->
+<script src="js/email.js"></script>
+
+</body>
+</html>
+    <section>
+       
+        
+        
+        <a href="https://discord.gg/nrpqVsbF5v" target="_blank" rel="noopener noreferrer">
+            <!-- <img src="discord.png" alt="Discord" style="height: 20px; width: 20px; margin-right: 5px; vertical-align: middle;" /> -->
+            Join our Discord
+          </a>
+          
+        <h3>Today's Top Free Picks</h3>
+        <ul>
+            <!-- TODO: SAFELY refresh list at 12am feature -->
+            <li> Nuggets </li>
+            <li> Knicks </li>
+            <!-- <li> </li> -->
+            <p>Live Scores: </p>
+            <iframe id="bullscore-embed-40799" width="100%" height="172"  src="https://www.bullscore.com/basketball/embade/match_h2h/WoWGQQ/" frameborder="0" scrolling="no"></iframe>
+            <iframe id="bullscore-embed-40843" width="100%" height="172"  src="https://www.bullscore.com/basketball/embade/match_h2h/WoWzoi/" frameborder="0" scrolling="no"></iframe>
+
+        </ul>
+    </section>
+    <section>
+        <h3>Yesterday's Top Free Picks</h3>
+        <ul>
+            <!-- TODO: refresh list at 12am -->
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <section>
+        <h3>Picks of the week</h3>
+        <ul>
+            <!-- TODO: refresh list at 12am -->
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<footer>
+    <p>&copy; 2024 Throwaway LLC. All rights reserved.</p>
+    <p> Always bet responsibly. </p>
+    <p> IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, CALL 1-800-GAMBLER FOR CRISIS COUNSELING AND REFERRAL SERVICES. SELECT YOUR STATE OF RESIDENCE TO VIEW ADDITIONAL STATE-SPECIFIC TERMS AND RESOURCES.</p>
+ 
