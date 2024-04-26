@@ -132,32 +132,31 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .header-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            flex: 1 1 auto; /* This enables the images to grow and shrink */
+        }
+
         @media only screen and (max-width: 600px) {
-    /* Existing styles for smaller screens */
+            .header-content img {
+                flex: 1 1 50%; /* On smaller screens, take up to 50% of the container */
+                max-width: 50%; /* Limit image width to 50% of the container */
+                height: auto;
+            }
+            header {
+                background-size: contain; /* Ensure the background fits on smaller screens */
+            }
+        }
 
-    header img[src='omalley2.png'] {
-        height: 60px; !important /* Adjusted height for smaller screens */
-        left: 100px; /* Adjust the positioning */
-        top: 10px; /* Adjust the positioning */
-    }
-
-    header img[src='holloway.png'] {
-        height: 50px; !important /* Adjusted height */
-        left: 50px; /* Adjust the positioning */
-    }
-
-    header img[src='pereria.png'],
-    header img[src='garcia.png'],
-    header img[src='lebron.png'],
-    header img[src='jokicdoncic.png'] {
-        height: 75px; !important /* Adjusted height */
-        width: auto; /* Maintain aspect ratio */
-        /* Adjust left and top values as needed */
-    }
-
-    /* Other responsive adjustments */
-    /* ... */
-}
     </style>
 </head>
 <body>
