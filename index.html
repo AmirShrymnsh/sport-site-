@@ -147,6 +147,32 @@
         background-size: cover; 
     }
 }
+        @media only screen and (max-width: 600px) {
+    /* Existing styles for smaller screens */
+
+    header img[src='omalley2.png'] {
+        height: 60px; /* Adjusted height for smaller screens */
+        left: 10px; /* Adjust the positioning */
+        top: 10px; /* Adjust the positioning */
+    }
+
+    header img[src='holloway.png'] {
+        height: 50px; /* Adjusted height */
+        left: 50px; /* Adjust the positioning */
+    }
+
+    header img[src='pereria.png'],
+    header img[src='garcia.png'],
+    header img[src='lebron.png'],
+    header img[src='jokicdoncic.png'] {
+        height: 75px; /* Adjusted height */
+        width: auto; /* Maintain aspect ratio */
+        /* Adjust left and top values as needed */
+    }
+
+    /* Other responsive adjustments */
+    /* ... */
+}
     </style>
 </head>
 <body>
