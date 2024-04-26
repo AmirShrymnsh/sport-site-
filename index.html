@@ -186,6 +186,40 @@
                 color: #FFF;
             }
         }
+                /* Mobile navigation styles */
+        @media only screen and (max-width: 600px) {
+            .mobile-nav button {
+                background: white; /* White background color */
+                color: purple; /* Purple text color */
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                width: 100%;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content li {
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content li a {
+                display: block;
+                padding: 10px;
+                color: purple;
+                text-decoration: none;
+                border-radius: 20px;
+                transition: background-color 0.2s ease;
+            }
+            .dropdown-content li a:hover {
+                background-color: rgb(253, 223, 54);
+                color: white;
+            }
+        }
     </style>
 </head>
 <body>
