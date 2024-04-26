@@ -140,6 +140,42 @@
             }
         }
     </style>
+            /* Mobile navigation menu styles */
+        .mobile-nav {
+            display: none; /* Hidden by default */
+        }
+
+        .mobile-nav button {
+            background: none;
+            border: none;
+            font-size: 24px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content li {
+            display: block;
+        }
+
+        @media only screen and (max-width: 600px) {
+            /* Hide desktop navigation menu */
+            .desktop-nav {
+                display: none;
+            }
+            
+            /* Show mobile navigation menu */
+            .mobile-nav {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -173,6 +209,29 @@
             <li><a class="btn" href="suppage.html">Live Support</a></li>
         </ul>
     </nav>
+        <div class="mobile-nav">
+        <button id="dropdownMenuButton">
+            <span>&#9776;</span> <!-- Hamburger icon -->
+        </button>
+        <ul id="dropdownMenuContent" class="dropdown-content">
+            <li><a href="previouspicks.html">Previous Free Picks</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="stockspage.html">Stocks</a></li>
+            <!-- ... other menu items ... -->
+        </ul>
+    </div>
+        <script>
+        // This script toggles the dropdown menu on mobile
+        document.getElementById('dropdownMenuButton').addEventListener('click', function() {
+            var content = document.getElementById('dropdownMenuContent');
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    </script>
+</body>
     <title>Newsletter Sign Up</title>
     <style>
         .newsletter-signup {
