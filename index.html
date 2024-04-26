@@ -220,6 +220,37 @@
                 color: white;
             }
         }
+           @media only screen and (max-width: 600px) {
+        /* Show the Discord link for mobile */
+        .discord-link-mobile {
+            display: inline-block; /* or flex if you need to align image and text */
+            align-items: center;
+            text-decoration: none;
+            color: #your-text-color; /* replace with your actual color */
+            margin-left: 10px; /* Space it out from the menu button */
+        }
+
+        /* Style adjustments for the mobile menu dropdown */
+        .mobile-nav {
+            display: flex;
+            justify-content: space-between; /* Align menu and Discord link */
+            align-items: center;
+            padding: 0 10px;
+        }
+        
+        /* Ensure dropdown content takes full width */
+        .dropdown-content {
+            width: 100%;
+            /* other styles */
+        }
+    }
+
+    /* Ensure the Discord link is not displayed on desktop */
+    @media only screen and (min-width: 601px) {
+        .discord-link-mobile {
+            display: none;
+        }
+    }
     </style>
 </head>
 <body>
@@ -349,12 +380,12 @@
     <section>
        
         
-<!--         
-<!--     <a href="https://discord.gg/nrpqVsbF5v" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"> -->
-<!--              <img src="disclogo.png" alt="Secure" style="height: 20px; width: 20px; vertical-align: middle;"> -->
-<!--             Join our Discord  -->
-<!--     </a> -->
-           -->
+        
+    <a href="https://discord.gg/nrpqVsbF5v" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+             <img src="disclogo.png" alt="Secure" style="height: 20px; width: 20px; vertical-align: middle;">
+            Join our Discord 
+    </a>
+          
         <h3>Today's Top Free Picks</h3>
         <ul>
             <!-- TODO: SAFELY refresh list at 12am feature -->
