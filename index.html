@@ -132,41 +132,29 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .header-content img {
-            flex: 1 1 auto; /* This enables the images to grow and shrink */
-            max-width: 15%; /* Adjust the percentage based on your design needs */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        .header-content h1 {
-            flex: 0 1 auto; /* Prevent the text from growing */
-            margin: 0 20px; /* Provide some space around the text */
-        }
-
+        /* Additional button styles can be added as needed */
         @media only screen and (max-width: 600px) {
-            .header-content img {
-            flex: 1 1 50%; /* On smaller screens, take up to 50% of the container */
-            max-width: 50%; /* Limit image width to 50% of the container */
-        }
-
-        .header-content h1 {
-        font-size: smaller; /* Adjust the font size for smaller screens */
-        }
+    nav ul li { 
+        display: block; 
+        margin-bottom: 5px; 
     }
+    
+    .newsletter-signup, .newsletter-signup iframe {
+        width: 100%;
+    }
+    
+    header {
+        background-size: cover; 
+    }
+}
     </style>
 </head>
 <body>
     <header>
-    <div class="header-content">
+        <div class="header-content">
             <h1>ThrowawayPicks</h1>
             <!-- The sun and clouds can be placed here as background elements -->
+        </div>
 
         <img src="omalley2.png" alt="UFC Player" style="position: absolute; left: 20px; top: 20px; height: 120px;">
         <img src="holloway.png" alt="NBA Player" style="position: absolute; left: 64px; top: 5px; height: 100px;">
@@ -175,8 +163,6 @@
         <img src="lebron.png" alt="UFC Fighter" style="position: absolute; right: 210px; top: 5px; height: 150px; width: auto; object-fit: cover; object-position: center;">
         <img src="jokicdoncic.png" alt="UFC Fighter" style="position: absolute; right: 20px; top: 2px; height: 150px; width: auto; object-fit: cover; object-position: center;">
        
-    </div>
-</header>
        
         <!-- 
         <div class="sun"></div>
