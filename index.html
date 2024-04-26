@@ -132,6 +132,12 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
+
+        @media only screen and (min-width: 601px) {
+    .mobile-nav {
+        display: none; /* Ensures it stays hidden on desktops */
+    }
+}
         /* Additional button styles can be added as needed */
         @media only screen and (max-width: 600px) {
             header img {
