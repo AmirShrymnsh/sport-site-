@@ -20,7 +20,7 @@
             background: url('splatter.png') no-repeat center center, purple;
             background-size: center; /* This will cover the entire header space */
             color: white; 
-            padding: 10px 10px; 
+            padding: 10px 20px; 
             text-align: center; 
             position: relative; 
             overflow: hidden; 
@@ -56,7 +56,7 @@
             list-style: none; 
             padding: 0; 
             margin: 0;
-            text-align: center;
+            text-align: left;
         }
 
         nav ul li { 
@@ -105,34 +105,58 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Media queries for responsive adjustments */
-        @media only screen and (max-width: 768px) {
-            /* Adjust styles for small screens, tablets and down */
-            nav ul li {
-                display: block;
-                margin: 8px 0;
-            }
+/* Add this within your <style> tag in the <head> section of your HTML document */
+    @media only screen and (max-width: 600px) {
+    header {
+        padding-top: 60px; /* Add padding to prevent overlap with the images */
+    }
 
-            nav ul li a {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
+    /* Resize and reposition header images on mobile */
+    header img {
+        height: 60px; /* Decrease the size of the images */
+        top: 10px; /* Position them a bit lower */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust horizontal centering */
+    }
 
-            .newsletter-signup, .newsletter-signup iframe {
-                width: 100%;
-                box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            }
+    /* Stack the navigation menu vertically */
+    nav ul {
+        text-align: left; /* Align to the left or center as you prefer */
+    }
 
-            header img {
-                max-height: 80px; /* Adjust header image size for mobile */
-                top: 5px; /* Adjust the top position for header images */
-            }
+    nav ul li {
+        display: block; /* Stack list items vertically */
+        margin: 5px 0; /* Add some margin for spacing */
+    }
 
-            .header-content h1 {
-                font-size: 24px; /* Adjust font size for small screens */
-            }
-        }
+    nav ul li a {
+        display: block; /* Make the anchors take the full width of the list item */
+        width: 100%; /* Full width */
+    }
+
+    /* Adjust the newsletter sign-up section for mobile */
+    .newsletter-signup,
+    .newsletter-signup iframe {
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding and border in the width */
+    }
+
+    .newsletter-signup input[type="email"] {
+        width: 90%; /* Reduce the width to fit the screen with padding */
+        margin: auto; /* Center it */
+    }
+
+    .newsletter-signup input[type="submit"] {
+        width: 90%; /* Match the email input width */
+    }
+
+    /* Adjust the font size for mobile readability */
+    .header-content h1 {
+        font-size: 20px; /* Decrease the font size on mobile */
+    }
+
+    /* Additional adjustments can be added as needed */
+}
     </style>
     </style>
 </head>
@@ -218,7 +242,7 @@
     }
     
     .newsletter-signup, .newsletter-signup iframe {
-        width: 100%;
+        width: 200%;
     }
     
     header {
