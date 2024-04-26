@@ -138,33 +138,46 @@
                 max-height: 60px; /* Smaller images on mobile */
                 margin-top: 46px;
             }
-            /* Hide desktop navigation menu */
+                /* Hide desktop navigation menu */
             nav ul {
                 display: none;
             }
-            /* Show mobile navigation menu */
-            .mobile-nav {
-                display: block;
-            }
-            /* Mobile navigation menu button */
+    
+            /* Style for mobile navigation button */
             .mobile-nav button {
                 background: none;
                 border: none;
                 font-size: 24px;
                 cursor: pointer;
             }
-            /* Dropdown content styles */
+    
+            /* Dropdown content when displayed */
             .dropdown-content {
-                display: none;
-                position: absolute;
+                display: none; /* Hidden by default, shown when button is clicked */
+                position: absolute; /* Position it on top of other content */
                 background-color: #f9f9f9;
-                min-width: 160px;
+                width: 100%; /* Full width */
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
                 z-index: 1;
             }
+    
             .dropdown-content li {
                 display: block;
                 text-align: left;
+            }
+    
+            .dropdown-content li a {
+                display: block;
+                padding: 10px;
+                color: purple;
+                text-decoration: none;
+                border-radius: 20px;
+                transition: background-color 0.2s ease;
+            }
+    
+            .dropdown-content li a:hover {
+                background-color: rgb(253, 223, 54);
+                color: #FFF;
             }
         }
     </style>
