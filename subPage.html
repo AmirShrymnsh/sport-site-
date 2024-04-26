@@ -25,13 +25,16 @@
         }
 
         .header-image {
-            position: absolute;
-            left: 10px; /* Adjust as needed */
-            top: 50%;
-            transform: translateY(-50%);
-            width: auto; /* Adjust as needed */
-            height: auto; /* Adjust as needed */
+            /* No need for absolute positioning */
+            max-width: 30%; /* Maximum width of the image */
+            height: auto; /* Adjust height automatically */
         }
+        
+        .header-content {
+            flex-grow: 1; /* Allow the text container to fill up the remaining space */
+            padding: 0 20px; /* Add some padding around the text */
+        }
+
 
         
         nav {
@@ -93,7 +96,8 @@
 </html>
 <body>
     <header>
-         <img src="jokicpass.jpg" alt="jokicpass" class="header-image">
+        <img src="jokicpass.jpg" alt="Basketball Player" class="header-image">
+        <div class="header-content">
         <h1>Subscribe for Premium Daily Picks✅</h1>
         
         <p2> 30-day Money Back Gaurenteed</p2>
