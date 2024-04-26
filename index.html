@@ -202,11 +202,17 @@
         </ul>
     </nav>
     <!-- Mobile navigation (initially hidden) -->
-    <div class="mobile-nav">
-        <button id="dropdownMenuButton">
-            <span>&#9776;</span> <!-- Hamburger icon -->
-        </button>
-        <ul id="dropdownMenuContent" class="dropdown-content">
+        <div class="mobile-nav">
+        <button id="dropdownMenuButton">&#9776; Menu</button>
+        <ul id="dropdownMenuContent" class="dropdown-content" style="display: none;">
+            <li><a href="previouspicks.html">Previous Free Picks</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="stockspage.html">Stocks</a></li>
+            <li><a href="#">Crypto</a></li>
+            <li><a href="subPage.html">Subscribe</a></li>
+            <li><a href="suppage.html">Live Support</a></li>
+        </ul>
+    </div>
     <script>
         // This script toggles the dropdown menu on mobile
         document.getElementById('dropdownMenuButton').addEventListener('click', function() {
