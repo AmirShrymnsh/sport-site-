@@ -255,6 +255,27 @@
             display: none;
         }
     }
+
+    .h2h-container {
+        overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    }
+    
+    .h2h-iframe {
+        width: 600px; /* Set a fixed width for larger screens */
+        height: 172px; /* Set a fixed height for larger screens */
+        border: none; /* Remove the border */
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .h2h-iframe {
+            width: 100%; /* Full width on smaller screens */
+            height: auto; /* Adjust height automatically */
+            min-height: 172px; /* Ensure it's not too small */
+        }
+    }
+
+
+        
     </style>
 </head>
 <body>
@@ -414,9 +435,10 @@
         <ul>
 
             <p>Live Scores: </p>
-            <iframe id="bullscore-embed-40799" width="100%" height="172"  src="https://www.bullscore.com/basketball/embade/match_h2h/WoWGQQ/" frameborder="0" scrolling="no"></iframe>
-            <iframe id="bullscore-embed-40843" width="100%" height="172"  src="https://www.bullscore.com/basketball/embade/match_h2h/WoWzoi/" frameborder="0" scrolling="no"></iframe>
-
+    <div class="h2h-container">
+        <iframe id="bullscore-embed-40799" class="h2h-iframe" src="https://www.bullscore.com/basketball/embade/match_h2h/WoWGQQ/" frameborder="0" scrolling="no"></iframe>
+        <iframe id="bullscore-embed-40843" class="h2h-iframe" src="https://www.bullscore.com/basketball/embade/match_h2h/WoWzoi/" frameborder="0" scrolling="no"></iframe>
+    </div>
         </ul>
         <h3>Yesterday's Top Free Picks</h3>
         <ul>
