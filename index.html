@@ -261,18 +261,19 @@
     }
     
     .h2h-iframe {
-        width: 1200px; /* Set a fixed width for larger screens */
-        height: 172px; /* Set a fixed height for larger screens */
-        border: none; /* Remove the border */
+    max-width: 600px; /* Set a max-width for larger screens */
+    width: 100%; /* Make the iframe responsive: it will take up 100% of the .h2h-container width */
+    height: 172px; /* Set a fixed height for larger screens */
+    border: none; /* Remove the border */
+}
+
+/* Styles that only apply to screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .h2h-iframe {
+        height: auto; /* Adjust height automatically */
+        aspect-ratio: 600 / 172; /* Maintain the aspect ratio */
     }
-    
-    @media only screen and (max-width: 600px) {
-        .h2h-iframe {
-            width: 300%; /* Full width on smaller screens */
-            height: auto; /* Adjust height automatically */
-            min-height: 172px; /* Ensure it's not too small */
-        }
-    }
+}
 
 
         
