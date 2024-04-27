@@ -259,9 +259,24 @@
     .h2h-container {
         overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
     }
-    
+            .discord-link-desktop {
+            text-decoration: none; /* This removes the underline */
+            /* ... other styles for discord-link-desktop ... */
+        }
 
+        /* Ensure that the link has no underline when it's hovered over, focused, or active */
+        .discord-link-desktop:hover,
+        .discord-link-desktop:focus,
+        .discord-link-desktop:active {
+            text-decoration: none;
+        }
 
+        .discord-link-mobile, .discord-link-desktop,
+.discord-link-mobile:hover, .discord-link-desktop:hover,
+.discord-link-mobile:active, .discord-link-desktop:active,
+.discord-link-mobile:visited, .discord-link-desktop:visited {
+    text-decoration: none; /* Ensures underline is removed in all states */
+}
         
     </style>
 </head>
@@ -342,7 +357,8 @@
 
         /* Show the mobile Discord link */
         .discord-link-mobile {
-            display: inline-block; /* or flex, depending on your design */
+            display: inline-block; 
+            text-decoration: none; /* or flex, depending on your design */
             /* Additional styling for mobile link */
         }
 
